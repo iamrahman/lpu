@@ -1,0 +1,143 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>   
+    <script type="text/javascript">
+    
+    window.fn = {};
+
+window.fn.open = function() {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+
+window.fn.load = function(page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('menu');
+  content.
+  load(page)
+    .then(menu.close.bind(menu));
+};
+    </script>
+    <style>
+     #main-menu
+        {
+            width: 40%;
+            height: 17%;
+            background-color: orangered;
+            float: left;
+            margin-left: 7%;
+            margin-top: 6%;
+            padding-top: 4%;
+            box-shadow: 2px 5px 5px black;
+        }
+        p3
+        {
+            margin-left: 5%;
+            font-style: bold;
+            font-size: 27px;
+            color: black;
+            font-family:serif;
+            font-size-adjust: auto;
+        }
+        .page--material__background
+        {
+            background-color: white;
+        }
+        #icon
+        {
+            width: 35%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+ <ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          About
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+<template id="home.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        <img src="img/icon.png" width="50px" height="50px">
+          <p3>LPU Calculator</p3>
+      </div>
+    </ons-toolbar>
+      <a href="cgpa.html"><ons-button id="main-menu"><img src="img/if_Test-paper-24_103838.png" id="icon"><br>CGPA</ons-button></a>
+      <ons-button id="main-menu"><img src="img/if_Test-paper-24_103838.png" id="icon"><br>TGPA</ons-button>
+      <ons-button id="main-menu"><img src="img/if_preferences-system-time_24279.png" id="icon"><br>Attendance</ons-button>
+      <ons-button id="main-menu"><img src="img/if_computer_173187.png" id="icon"><br>Computer ETP</ons-button>
+      <ons-button id="main-menu"><img src="img/if_document-03_1622833.png" id="icon"><br>Re-Exam</ons-button>
+      <ons-button id="main-menu"><img src="img/if_document-03_1622833.png" id="icon"><br>ETE</ons-button>
+      <ons-button id="main-menu"><img src="img/1845738-128.png" id="icon"><br>Bunk</ons-button>
+      <ons-button id="main-menu"><img src="img/if_Form_1940829.png" id="icon"><br>Feedback</ons-button>
+  </ons-page>
+</template>
+<template id="settings.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Settings
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="about.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        About
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+     
+  <ons-speed-dial position="bottom right" direction="up">
+    <ons-fab>
+      <ons-icon icon="md-share"></ons-icon>
+    </ons-fab>
+    <ons-speed-dial-item>
+      <ons-icon icon="md-twitter"></ons-icon>
+    </ons-speed-dial-item>
+    <ons-speed-dial-item>
+      <ons-icon icon="md-facebook"></ons-icon>
+    </ons-speed-dial-item>
+    <ons-speed-dial-item>
+      <ons-icon icon="md-google-plus"></ons-icon>
+    </ons-speed-dial-item>
+  </ons-speed-dial>
+</body>
+
+</html>
