@@ -26,6 +26,7 @@ window.fn.load = function(page) {
             var ca1 = document.getElementById('ca1').value;
             var ca2 = document.getElementById('ca2').value;
             var ca3 = document.getElementById('ca3').value;
+            var mte = document.getElementById('mte').value;
             var p5=document.getElementById('attend').value;
             var value=0;
             if(p5>=90)
@@ -48,7 +49,7 @@ window.fn.load = function(page) {
                 {
                     value=0;
                 }
-            if(ca1>30 || ca2>30 || ca3>30 || p5>100)
+            if(ca1>30 || ca2>30 || ca3>30 || p5>100 || mte>=40)
                 {
                      document.getElementById('mesg').innerHTML="Your data is out of range";
                 }
@@ -82,10 +83,11 @@ window.fn.load = function(page) {
                         }
                     var sum=eval(data[0]+data[1]+data[2]);
                    // document.getElementById('try').innerHTML=" "+data[0]+" "+data[1]+" "+data[2];
-                    var sum=eval(sum+value);
+                    mte=((mte/40)*20);
+                    var sum=eval(sum+value+mte);
                     var final = 40-sum;
-                    final=((final/75)*100).toFixed(1);
-                    document.getElementById('mesg').innerHTML="Your Score is "+ sum.toFixed(0)+" out of 25<br>"+"You need to score atleat "+final+"% marks";
+                    final=((final/50)*100).toFixed(1);
+                    document.getElementById('mesg').innerHTML="Your Score is "+ sum.toFixed(0)+" out of 50<br>"+"You need to score atleat "+final+"% marks";
                 }
         }
     </script>
@@ -187,7 +189,7 @@ window.fn.load = function(page) {
     </ons-toolbar>
       <ons-page>
   <ons-toolbar>
-    <div class="center">Re Exam Marks Calculation</div>
+    <div class="center">ETE Marks Calculation</div>
   </ons-toolbar>
   <div style="text-align: center; margin-top: 30px;">
     <p>
@@ -200,12 +202,15 @@ window.fn.load = function(page) {
      <ons-input id="ca3" modifier="underbar" placeholder="Enter marks of CA3" float></ons-input>
     </p><br>
       <p>
+     <ons-input id="mte" modifier="underbar" placeholder="Enter marks of MTE" float></ons-input>
+    </p><br>
+      <p>
      <ons-input id="attend" modifier="underbar" placeholder="Attendence Percentage" float></ons-input>
     </p><br>
-    <p style="margin-top: 30px;">
+    <p style="margin-top: 20px;">
       <ons-button onclick="show()">Show </ons-button>
     </p>
-      <p id="mesg" style="color: orangered; margin-top: 30%;"> Number of semester i.e excluding <br>your current Semester</p>
+      <p id="mesg" style="color: orangered; margin-top: 15%;">We will calculate marks till MTE <br> You need minimum 30% marks to pass in ETE</p>
   </div>
       </ons-page>
      

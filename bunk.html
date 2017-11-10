@@ -23,70 +23,43 @@ window.fn.load = function(page) {
     <script type="text/javascript">
     function show()
         {
-            var ca1 = document.getElementById('ca1').value;
-            var ca2 = document.getElementById('ca2').value;
-            var ca3 = document.getElementById('ca3').value;
-            var p5=document.getElementById('attend').value;
-            var value=0;
-            if(p5>=90)
+            var cls_h = document.getElementById('cls_h').value;
+            var cls_p = document.getElementById('cls_p').value;
+            var cls_r = document.getElementById('cls_r').value;
+            if(eval(cls_h)>eval(cls_p))
                 {
-                    value=5;
-                }
-            else if(p5>=85 && p5<90)
-                {
-                    value=4;
-                }
-            else if(p5>=80 && p5<85)
-                {
-                    value=3;
-                }
-            else if(p5>=75 && p5<80)
-                {
-                    value=2;
-                }
-            else
-                {
-                    value=0;
-                }
-            if(ca1>30 || ca2>30 || ca3>30 || p5>100)
-                {
-                     document.getElementById('mesg').innerHTML="Your data is out of range";
-                }
-            else
-                {
-                    var minm=Math.min(ca1,ca2,ca3);
-                    var data = new Array(ca1,ca2,ca3);
-                    if(data[0]==minm)
+                    var divi= (cls_p/cls_h)*100;
+                    var result = Math.ceil(divi);
+                    var fcls_h = eval(cls_h)+eval(cls_r);
+                    var fcls_p = eval(cls_p)+eval(cls_r);
+                    var fper = (eval(fcls_p)/eval(fcls_h))*100
+                    var bper = eval(fper)-eval(75);
+                    var fresult = (eval(bper)/100)*eval(fcls_h);
+                    if(eval(fresult)>0)
                         {
-                            data[0]=0;
+                            document.getElementById('mesg').innerHTML="You can bunk "+fresult+" classes";
                         }
-                    else if(data[1]==minm)
+                    else if(eval(fresult)==0)
                         {
-                            data[1]=0;
+                            document.getElementById('mesg').innerHTML="You can not bunk any class";
                         }
                     else
                         {
-                            data[2]=0;
+                            document.getElementById('mesg').innerHTML="Sorry! you can't reach 75% attendance";
                         }
-                   // document.getElementById('try').innerHTML="Helloe"+data[1];
-                    for(var i=0;i<3;i++)
-                        {
-                            if(data[i]%3 !=0)
-                                {
-                                    data[i]=Math.ceil(data[i]/3);
-                                }
-                            else
-                            {
-                                    data[i]=data[i]/3;
-                            }
-                        }
-                    var sum=eval(data[0]+data[1]+data[2]);
-                   // document.getElementById('try').innerHTML=" "+data[0]+" "+data[1]+" "+data[2];
-                    var sum=eval(sum+value);
-                    var final = 40-sum;
-                    final=((final/75)*100).toFixed(1);
-                    document.getElementById('mesg').innerHTML="Your Score is "+ sum.toFixed(0)+" out of 25<br>"+"You need to score atleat "+final+"% marks";
                 }
+            else
+                {
+                     document.getElementById('mesg').innerHTML="Invalid data please try again";
+                }
+            /*
+            var xcls_h=eval(cls_h+cls_r);
+            var ycls_h=eval(cls_p+cls_r);
+            var zdivi= (ycls_p/xcls_h)*100;
+            var aresult = Math.ceil(zdivi);
+            
+            document.getElementById('mesg').innerHTML="Your current attendance is "+ result +"<br> If yu attend all class then your attendance will be ";
+            */
         }
     </script>
     <style>
@@ -174,7 +147,7 @@ window.fn.load = function(page) {
 </ons-splitter>
 <template id="home.html">
   <ons-page>
-    <ons-toolbar style="background-color: black;">
+       <ons-toolbar style="background-color: black;">
       <div class="left">
         <ons-toolbar-button onclick="fn.open()">
           <ons-icon icon="md-menu"></ons-icon>
@@ -187,21 +160,18 @@ window.fn.load = function(page) {
     </ons-toolbar>
       <ons-page>
   <ons-toolbar>
-    <div class="center">Re Exam Marks Calculation</div>
+    <div class="center">Number of classes you can bunk</div>
   </ons-toolbar>
   <div style="text-align: center; margin-top: 30px;">
     <p>
-    <ons-input id="ca1" modifier="underbar" placeholder="Enter marks of CA1" float></ons-input>
+    <ons-input id="cls_h" modifier="underbar" placeholder="Number of class held" float></ons-input>
     </p><br>
     <p>
-     <ons-input id="ca2" modifier="underbar" placeholder="Enter marks of CA2" float></ons-input>
+     <ons-input id="cls_p" modifier="underbar" placeholder="Number of days Present" float></ons-input>
     </p><br>
     <p>
-     <ons-input id="ca3" modifier="underbar" placeholder="Enter marks of CA3" float></ons-input>
-    </p><br>
-      <p>
-     <ons-input id="attend" modifier="underbar" placeholder="Attendence Percentage" float></ons-input>
-    </p><br>
+     <ons-input id="cls_r" modifier="underbar" placeholder=" Number of class remaining" float></ons-input>
+    </p>
     <p style="margin-top: 30px;">
       <ons-button onclick="show()">Show </ons-button>
     </p>
