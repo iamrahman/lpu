@@ -28,12 +28,10 @@ window.fn.load = function(page) {
             var cls_r = document.getElementById('cls_r').value;
             if(eval(cls_h)>eval(cls_p))
                 {
-                    var divi= (cls_p/cls_h)*100;
-                    var result = Math.ceil(divi);
                     var fcls_h = eval(cls_h)+eval(cls_r);
                     var fcls_p = eval(cls_p)+eval(cls_r);
                     var fper = (eval(fcls_p)/eval(fcls_h))*100;
-                    fper=Math.ceil(fper);
+                    //fper=Math.ceil(fper);
                     var bper = eval(fper)-eval(75);
                     var fresult = (eval(bper)/100)*eval(fcls_h);
                     fresult= Math.ceil(fresult);
