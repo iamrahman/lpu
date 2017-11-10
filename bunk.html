@@ -35,6 +35,7 @@ window.fn.load = function(page) {
                     var fper = (eval(fcls_p)/eval(fcls_h))*100
                     var bper = eval(fper)-eval(75);
                     var fresult = (eval(bper)/100)*eval(fcls_h);
+                    fresult= Math.ceil(fresult);
                     if(eval(fresult)>0)
                         {
                             document.getElementById('mesg').innerHTML="You can bunk "+fresult+" classes";
