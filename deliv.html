@@ -1,0 +1,184 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>   
+    <script type="text/javascript">
+    
+    window.fn = {};
+
+window.fn.open = function() {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+
+window.fn.load = function(page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('menu');
+  content.
+  load(page)
+    .then(menu.close.bind(menu));
+};
+    </script>
+    <script type="text/javascript">
+    function show()
+        {
+            var cgpa = document.getElementById('c_cgpa').value;
+            var gcgpa = document.getElementById('g_cgpa').value;
+            var noso = document.getElementById('no_sem_over').value;
+            var result = eval(cgpa*noso)+eval(gcgpa);
+            noso = eval(noso)+1;
+            var fcgpa = result/(noso);
+            document.getElementById('mesg').innerHTML="Your final CGPA will be "+ fcgpa.toFixed(2);
+        }
+    </script>
+    <style>
+     #main-menu
+        {
+            width: 40%;
+            height: 17%;
+            background-color: orangered;
+            float: left;
+            margin-left: 7%;
+            margin-top: 6%;
+            padding-top: 4%;
+            box-shadow: 2px 2px 2px black;
+        }
+        p3
+        {
+            margin-left: 5%;
+            font-style: bold;
+            font-size: 27px;
+            color: orangered;
+            font-family:sans-serif;
+        }
+        .page--material__background
+        {
+            background-color: white;
+        }
+        #icon
+        {
+            width: 35%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+ <ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          About
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+<template id="home.html">
+  <ons-page>
+       <ons-toolbar style="background-color: black;">
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center" style="background-color: black">
+        <img src="icon.png" width="auto" height="50px">
+          
+      </div>
+    </ons-toolbar>
+      <ons-page>
+  <ons-toolbar>
+    <div class="center">List of Shops</div>
+  </ons-toolbar>
+  <div style="text-align: center; margin-top: 10px;">
+      <a href="#"><ons-button id="main-menu" style="background-color: red"><img src="115729-128%20(1).png" id="icon"><br>Himalay Foods</ons-button></a>
+      <a href="#"><ons-button id="main-menu" style="background-color: darkgreen"><img src="115729-128%20(1).png" id="icon"><br>Bangali Bawarchi</ons-button></a>
+      <a href="#"><ons-button id="main-menu" style="background-color:darkorange"><img src="115729-128%20(1).png" id="icon"><br>Classic Foods</ons-button></a>
+      <a href="#"><ons-button id="main-menu" style="background-color: darkviolet"><img src="115729-128%20(1).png" id="icon"><br>Agarwal Foods</ons-button></a>
+      <a href="#"><ons-button id="main-menu" style="background-color: darkblue"><img src="115729-128%20(1).png" id="icon"><br>Right Choice</ons-button></a>
+      <a href="#"><ons-button id="main-menu" style="background-color: fuchsia"><img src="115729-128%20(1).png" id="icon"><br>SK Foods</ons-button></a>
+      <a href="#"><ons-button id="main-menu" style="background-color: saddlebrown"><img src="115729-128%20(1).png" id="icon"><br>Fast Foods</ons-button></a>
+      <a href="#"><ons-button id="main-menu" style="background-color: firebrick"><img src="115729-128%20(1).png" id="icon"><br>Punjabi Dhaba</ons-button></a>
+
+  </div>
+      </ons-page>
+     
+  </ons-page>
+</template>
+
+<template id="settings.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Settings
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="about.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        About
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+     
+  
+</body>
+
+</html>
