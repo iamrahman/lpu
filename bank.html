@@ -21,15 +21,37 @@ window.fn.load = function(page) {
 };
     </script>
     <script type="text/javascript">
-    function show()
+    function fun()
         {
-            var cgpa = document.getElementById('c_cgpa').value;
-            var gcgpa = document.getElementById('g_cgpa').value;
-            var noso = document.getElementById('no_sem_over').value;
-            var result = eval(cgpa*noso)+eval(gcgpa);
-            noso = eval(noso)+1;
-            var fcgpa = result/(noso);
-            document.getElementById('mesg').innerHTML="Your final CGPA will be "+ fcgpa.toFixed(2);
+            var icici="<center><h style='font-size:160%;'>ICICI Bank</h></center><hr><p2 style='font-size:120%;'><b>Bank:</b><br> LPU Mall, first floor, Block 11<br><b>IFSC Code: </b>ICIC0002626 <br><b>MICR Code:</b> 144229202<br><b>Timing: </b>Timings: Monday to Friday: 10 AM to 4 PM, Saturday - 10 AM to 4 PM(Except 2nd and 4th Saturday).<br><b>ATM:</b><br> LPU Mall first floor<br> Apartment Block 40.</p2>";
+            var pnb="<center><h style='font-size:160%;'>Punjab National Bank</h></center><hr><p2 style='font-size:120%;'><b>Bank:</b><br>LIT Block, Basement,Block 03<br><b>IFSC Code: </b>PUNB0494200 <br><b>Contact :</b>99156-46195<br><b>Timing: </b>Timings: Monday to Friday: 10 AM to 4 PM, Saturday - 10 AM to 4 PM(Except 2nd and 4th Saturday).<br><b>ATM:</b><br> Apartment Block 40.</p2>";
+            var icici="<center><h style='font-size:160%;'>ICICI Bank</h></center><hr><p2 style='font-size:120%;'><b>Bank:</b><br> LPU Mall, first floor, Block 11<br><b>Bank\
+IFSC Code: </b>ICIC0002626 <br><b>MICR Code:</b> 144229202<br><b>Timing: </b>Timings: Monday to Friday: 10 AM to 4 PM, Saturday - 10 AM to 4 PM(Except 2nd and 4th Saturday).<br><b>ATM:</b><br> LPU Mall first floor<br> Apartment Block 40.</p2>";
+            var icici="<center><h style='font-size:160%;'>ICICI Bank</h></center><hr><p2 style='font-size:120%;'><b>Bank:</b><br> LPU Mall, first floor, Block 11<br><b>Bank\
+IFSC Code: </b>ICIC0002626 <br><b>MICR Code:</b> 144229202<br><b>Timing: </b>Timings: Monday to Friday: 10 AM to 4 PM, Saturday - 10 AM to 4 PM(Except 2nd and 4th Saturday).<br><b>ATM:</b><br> LPU Mall first floor<br> Apartment Block 40.</p2>";
+            var icici="<center><h style='font-size:160%;'>ICICI Bank</h></center><hr><p2 style='font-size:120%;'><b>Bank:</b><br> LPU Mall, first floor, Block 11<br><b>Bank\
+IFSC Code: </b>ICIC0002626 <br><b>MICR Code:</b> 144229202<br><b>Timing: </b>Timings: Monday to Friday: 10 AM to 4 PM, Saturday - 10 AM to 4 PM(Except 2nd and 4th Saturday).<br><b>ATM:</b><br> LPU Mall first floor<br> Apartment Block 40.</p2>";
+           var x = document.getElementById('choose').value;
+            if(x==1)
+                {
+                    document.getElementById('data').innerHTML=icici;
+                }
+            if(x==2)
+                {
+                    document.getElementById('data').innerHTML="Yes_2";
+                }
+            if(x==3)
+                {
+                    document.getElementById('data').innerHTML=pnb;
+                }
+            if(x==4)
+                {
+                    document.getElementById('data').innerHTML="Yes_4";
+                }
+            if(x==5)
+                {
+                    document.getElementById('data').innerHTML="Yes_5";
+                }
         }
     </script>
     <style>
@@ -142,20 +164,19 @@ window.fn.load = function(page) {
     </div>
     <div class="content">
         <center>
-     <ons-select id="choose-sel" onchange="editSelects(event)">
-    <option value="basic">Select the Bank</option>
-    <option value="material">Material</option>
-    <option value="underbar">Underbar</option>
+     <ons-select id="choose" onchange="fun()">
+    <option value="">Select the Bank</option>
+    <option value="1">ICIC Bank </option>
+    <option value="2">State Bank of India</option>
+    <option value="3">Punjab National Bank</option>
+    <option value="4">Oriental Bank of Commerce</option>
+    <option value="5">Karur Vysya Bank</option>
+    <option value="6">HDFC Bank</option>
   </ons-select></center>
         <br>
+        <p id="data">
 In addition to a Western Union, University has tie ups with 5 of the most renowned banks.
-<ul>
-<li>ICICI Bank</li>
-<li>State Bank of India</li>
-    <li>Punjab National Bank</li>
-<li>Oriental Bank of Commerce</li>
-    <li>  Karur Vysya Bank</li>
-    </ul>
+        </p>
     </div>
   </ons-card>
 </ons-page>
