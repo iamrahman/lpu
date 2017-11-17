@@ -20,26 +20,39 @@ window.fn.load = function(page) {
     .then(menu.close.bind(menu));
 };
     </script>
+    <script type="text/javascript">
+    function show()
+        {
+            var cgpa = document.getElementById('c_cgpa').value;
+            var gcgpa = document.getElementById('g_cgpa').value;
+            var noso = document.getElementById('no_sem_over').value;
+            var result = eval(cgpa*noso)+eval(gcgpa);
+            noso = eval(noso)+1;
+            var fcgpa = result/(noso);
+            document.getElementById('mesg').innerHTML="Your final CGPA will be "+ fcgpa.toFixed(2);
+        }
+    </script>
     <style>
      #main-menu
         {
             width: 40%;
             height: 17%;
-            background-color:#003366;
+            background-color: orangered;
             float: left;
             margin-left: 7%;
             margin-top: 6%;
             padding-top: 4%;
-            box-shadow: 2px 5px 5px black;
+            box-shadow: 2px 2px 2px black;
         }
         p3
         {
             margin-left: 5%;
-            font-style: bold;
-            font-size: 27px;
-            color: black;
-            font-family:serif;
-            font-size-adjust: auto;
+            font-size: 140%;;
+            color: white;
+        }
+        p4
+        {
+            float: right;
         }
         .page--material__background
         {
@@ -64,6 +77,39 @@ window.fn.load = function(page) {
           CGPA
         </ons-list-item>
         <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
           About
         </ons-list-item>
       </ons-list>
@@ -73,7 +119,7 @@ window.fn.load = function(page) {
 </ons-splitter>
 <template id="home.html">
   <ons-page>
-    <ons-toolbar style="background-color: black;">
+       <ons-toolbar style="background-color: black;">
       <div class="left">
         <ons-toolbar-button onclick="fn.open()">
           <ons-icon icon="md-menu"></ons-icon>
@@ -84,22 +130,38 @@ window.fn.load = function(page) {
           
       </div>
     </ons-toolbar>
-      <a href="cgpa.html"><ons-button id="main-menu"><img src="if_Test-paper-24_103838.png" id="icon"><br>CGPA</ons-button></a>
-      <a href="attend.html"><ons-button id="main-menu"><img src="if_preferences-system-time_24279.png" id="icon"><br>Attendance</ons-button></a>
-      <a href="cete.html"><ons-button id="main-menu"><img src="if_computer_173187.png" id="icon"><br>Computer ETP</ons-button></a>
-      <a href="reexam.html"><ons-button id="main-menu"><img src="if_document-03_1622833.png" id="icon"><br>Re-Exam</ons-button></a>
-      <a href="ete.html"><ons-button id="main-menu"><img src="if_document-03_1622833.png" id="icon"><br>ETE</ons-button></a>
-      <a href="bunk.html"><ons-button id="main-menu"><img src="1845738-128.png" id="icon"><br>Bunk</ons-button></a>
-      <a href="cafe.html"><ons-button id="main-menu"><img src="352514-128.png" id="icon"><br>Cafeteria</ons-button></a>
-       <a href=""><ons-button id="main-menu"><img src="353397-128.png" id="icon"><br>Campus Map</ons-button></a>
-      <ons-button id="main-menu"><img src="1118213-128.png" id="icon" style="height: 50%;"><br>Gym</ons-button>
-      <a href="shop1.html"><ons-button id="main-menu"><img src="375260-128.png" id="icon"><br>Hospital</ons-button></a>
-      <a href="bank.html"><ons-button id="main-menu"><img src="2703084-128.png" id="icon"><br>Bank & ATM</ons-button></a>
-      <ons-button id="main-menu"><img src="2639905-128.png" id="icon"><br>Travel</ons-button>
-      <ons-button id="main-menu"><img src="if_Form_1940829.png" id="icon"><br>Feedback</ons-button>
-      
+<ons-page>
+  <ons-toolbar>
+    <div class="center">Bank & ATM</div>
+  </ons-toolbar>
+
+  <ons-card>
+    <img src="bank1.png" alt="Onsen UI" style="width: 100%">
+    <div class="title">
+      5 BANKS & 50+ ATMS
+    </div>
+    <div class="content">
+        <center>
+     <ons-select id="choose-sel" onchange="editSelects(event)">
+    <option value="basic">Select the Bank</option>
+    <option value="material">Material</option>
+    <option value="underbar">Underbar</option>
+  </ons-select></center>
+        <br>
+In addition to a Western Union, University has tie ups with 5 of the most renowned banks.
+<ul>
+<li>ICICI Bank</li>
+<li>State Bank of India</li>
+    <li>Punjab National Bank</li>
+<li>Oriental Bank of Commerce</li>
+    <li>  Karur Vysya Bank</li>
+    </ul>
+    </div>
+  </ons-card>
+</ons-page>
   </ons-page>
 </template>
+
 <template id="settings.html">
   <ons-page>
     <ons-toolbar>
@@ -130,20 +192,8 @@ window.fn.load = function(page) {
   </ons-page>
 </template>
      
-  <ons-speed-dial position="bottom right" direction="up">
-    <ons-fab>
-      <ons-icon icon="md-share"></ons-icon>
-    </ons-fab>
-    <ons-speed-dial-item>
-      <ons-icon icon="md-twitter"></ons-icon>
-    </ons-speed-dial-item>
-    <ons-speed-dial-item>
-      <ons-icon icon="md-facebook"></ons-icon>
-    </ons-speed-dial-item>
-    <ons-speed-dial-item>
-      <ons-icon icon="md-google-plus"></ons-icon>
-    </ons-speed-dial-item>
-  </ons-speed-dial>
+  
 </body>
 
 </html>
+
