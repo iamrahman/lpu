@@ -1,0 +1,217 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>   
+    <script type="text/javascript">
+    
+    window.fn = {};
+
+window.fn.open = function() {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+
+window.fn.load = function(page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('menu');
+  content.
+  load(page)
+    .then(menu.close.bind(menu));
+};
+    </script>
+    <script type="text/javascript">
+    function show()
+        {
+            var cgpa = document.getElementById('c_cgpa').value;
+            var gcgpa = document.getElementById('g_cgpa').value;
+            var noso = document.getElementById('no_sem_over').value;
+            var result = eval(cgpa*noso)+eval(gcgpa);
+            noso = eval(noso)+1;
+            var fcgpa = result/(noso);
+            document.getElementById('mesg').innerHTML="Your final CGPA will be "+ fcgpa.toFixed(2);
+        }
+    </script>
+    <style>
+     #main-menu
+        {
+            width: 40%;
+            height: 17%;
+            background-color: orangered;
+            float: left;
+            margin-left: 7%;
+            margin-top: 6%;
+            padding-top: 4%;
+            box-shadow: 2px 2px 2px black;
+        }
+        p3
+        {
+            margin-left: 5%;
+            font-style: bold;
+            font-size: 27px;
+            color: orangered;
+            font-family:sans-serif;
+        }
+        .page--material__background
+        {
+            background-color: white;
+        }
+        #icon
+        {
+            width: 35%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+ <ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          About
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+<template id="home.html">
+  <ons-page>
+       <ons-toolbar style="background-color: black;">
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center" style="background-color: black">
+        <img src="icon.png" width="auto" height="50px">
+          
+      </div>
+    </ons-toolbar>
+      <ons-page>
+  <div style="text-align: center; margin-top: 30px;">
+  <ons-page>
+  <ons-toolbar>
+    <div class="center">GYM in Campus</div>
+  </ons-toolbar>
+
+  <ons-card style="background-color:darkviolet;">
+    <img src="gymp1.png" alt="IMG" style="width: 100%">
+    <div class="title">
+      <p style="color: white;">Fitness Edge Gym & Spa</p>
+    </div>
+    <div class="content">
+      <ons-list>
+        <ons-list-header>Bindings: 11-Block</ons-list-header>
+        <ons-list-item>Venu: LPU Mall, Upper floor</ons-list-item>
+        <ons-list-item>Contact : 0182-3224000</ons-list-item>
+        <ons-list-item>Timming: 10:00AM to 9:00PM</ons-list-item>
+        <ons-list-item>Website: www.fitessedge.in</ons-list-item>
+        <ons-list-item>Google Raiting: <img src="if_star_yellow_69391.png" style="width: 8%;"><img src="if_star_yellow_69391.png" style="width: 8%;"><img src="if_star_yellow_69391.png" style="width: 8%;"><img src="if_star_yellow_69391.png" style="width: 8%;">4/5</ons-list-item>
+        <ons-list-item>Six Month Membership <pre>               </pre> Rs.11,000</ons-list-item>
+        <ons-list-item>One Year Membership <pre>                </pre> Rs.16,000</ons-list-item>
+        <ons-list-item>Three Month Membership <pre>             </pre> Rs.6,000</ons-list-item>
+      </ons-list>
+    </div>
+  </ons-card>
+<ons-card style="background-color:darkcyan;">
+    <img src="gymp12.png" alt="IMG" style="width: 100%">
+    <div class="title">
+      <p style="color: white;">GYMnasium LPU</p>
+    </div>
+    <div class="content">
+      <ons-list>
+        <ons-list-header>Bindings: 11-Block</ons-list-header>
+        <ons-list-item>Venu: LPU Mall, Upper floor</ons-list-item>
+        <ons-list-item>Contact : 0182-3224000</ons-list-item>
+        <ons-list-item>Timming: 10:00AM to 9:00PM</ons-list-item>
+        <ons-list-item>Website: www.fitessedge.in</ons-list-item>
+        <ons-list-item>Google Raiting: <img src="if_star_yellow_69391.png" style="width: 8%;"><img src="if_star_yellow_69391.png" style="width: 8%;"><img src="if_star_yellow_69391.png" style="width: 8%;"><img src="if_star_yellow_69391.png" style="width: 8%;">4/5</ons-list-item>
+        <ons-list-item>Six Month Membership <pre>               </pre> Rs.11,000</ons-list-item>
+        <ons-list-item>One Year Membership <pre>                </pre> Rs.16,000</ons-list-item>
+        <ons-list-item>Three Month Membership <pre>             </pre> Rs.6,000</ons-list-item>
+      </ons-list>
+    </div>
+  </ons-card>
+
+</ons-page>
+  </div>
+      </ons-page>
+     
+  </ons-page>
+</template>
+
+<template id="settings.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Settings
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="about.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        About
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+     
+  
+</body>
+
+</html>
