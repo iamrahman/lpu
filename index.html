@@ -47,8 +47,21 @@ window.fn.load = function(page) {
         }
         #icon
         {
-            width: 35%;
-            height: 40%;
+            width: auto;
+            height: 50%;
+        }
+         #icon1
+        {
+            width: auto;
+            height: 100%;
+            float: left;
+        }
+        h4{
+            color: orangered;
+            font-size: 150%;
+            margin-top: 0%;
+            text-shadow: 3px 1px 1px darkblue;
+            font-family:monospace;
         }
     </style>
 </head>
@@ -104,10 +117,11 @@ window.fn.load = function(page) {
         </ons-toolbar-button>
       </div>
       <div class="center" style="background-color: black">
-        <img src="icon.png" width="auto" height="50px">
+        <img src="icon.png" id="icon1"><h4> LPU Guide</h4>
           
       </div>
     </ons-toolbar>
+      <center>
       <a href="cgpa.html"><ons-button id="main-menu"><img src="if_Test-paper-24_103838.png" id="icon"><br>CGPA</ons-button></a>
       <a href="attend.html"><ons-button id="main-menu"><img src="if_preferences-system-time_24279.png" id="icon"><br>Attendance</ons-button></a>
       <a href="cete.html"><ons-button id="main-menu"><img src="if_computer_173187.png" id="icon"><br>Computer ETP</ons-button></a>
@@ -122,7 +136,7 @@ window.fn.load = function(page) {
       <a href="travel.html"><ons-button id="main-menu"><img src="2639905-128.png" id="icon"><br>Travel</ons-button></a>
       <a href="sec.html"><ons-button id="main-menu"><img src="309038-128.png" id="icon"><br>Security</ons-button></a>
       <a href="about.html"><ons-button id="main-menu"><img src="473778-256.png" id="icon"><br>About Us</ons-button></a>
-      
+      </center>
   </ons-page>
 </template>
 <template id="settings.html">
