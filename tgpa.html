@@ -1,0 +1,177 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>   
+    <script type="text/javascript">
+    
+    window.fn = {};
+
+window.fn.open = function() {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+
+window.fn.load = function(page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('menu');
+  content.
+  load(page)
+    .then(menu.close.bind(menu));
+};
+    </script>
+    <script type="text/javascript">
+
+    </script>
+    <style>
+     #main-menu
+        {
+            width: 40%;
+            height: 17%;
+            background-color: orangered;
+            float: left;
+            margin-left: 7%;
+            margin-top: 6%;
+            padding-top: 4%;
+            box-shadow: 2px 2px 2px black;
+        }
+        p3
+        {
+            margin-left: 5%;
+            font-style: bold;
+            font-size: 27px;
+            color: orangered;
+            font-family:sans-serif;
+        }
+        .page--material__background
+        {
+            background-color: white;
+        }
+        #icon
+        {
+            width: 35%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+ <ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          CGPA
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          TGPA
+        </ons-list-item>
+         <ons-list-item onclick="fn.load('home.html')" tappable>
+          ETP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          MTP
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          About
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+<template id="home.html">
+  <ons-page>
+       <ons-toolbar style="background-color: black;">
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center" style="background-color: black">
+        <img src="icon.png" width="auto" height="50px">
+          
+      </div>
+    </ons-toolbar>
+      <ons-page>
+  <ons-toolbar>
+    <div class="center">TGPA Calculator</div>
+  </ons-toolbar>
+  <div style="text-align: center; margin-top: 30px;">
+       <form>
+        No. of Chapter included
+        <p>
+     <ons-input id="nochapter" type="text" modifier="underbar" placeholder=" Number of class remaining" float></ons-input>
+    </p>
+           <p style="margin-top: 30px;">
+      <ons-button onclick="generate()" type="button" value="set">Show </ons-button>
+    </p>
+        <div id="ch" style="background-color: red;"></div>
+    </form>
+    
+  </div>
+      </ons-page>
+     
+  </ons-page>
+</template>
+
+<template id="settings.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Settings
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="about.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        About
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+     
+  
+</body>
+
+</html>

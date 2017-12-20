@@ -61,6 +61,9 @@ window.fn.load = function(page) {
             width: 35%;
             height: 40%;
         }
+        a{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -131,99 +134,29 @@ window.fn.load = function(page) {
       <ons-page>
   <div style="text-align: center; margin-top: 30px;">
   <ons-page>
-  <ons-toolbar>
-    <div class="center"><img src="tra1.png"></div>
-  </ons-toolbar>
-  <ons-card style="background-color:orangered;">
-      <img src="rishi.jpg" alt="IMG" style="width: 100%">
+  <ons-card style="background-color:orangered; height:auto">
+      <img src="sec.png" alt="IMG" style="width: 100%">
       <div class="title">
-        <p style="color: white;">Rishikesh</p>
+        <p style="color: white;">Security</p>
       </div>
-      <div class="content">
+      <div class="content"  style="height:auto;">
         <ons-list>
-          <ons-list-header>Facilities</ons-list-header>
-          <ons-list-item> ₹3099 - 2D/2N</ons-list-item>
-          <ons-list-item><b>Place to visit:</b></ons-list-item>
-          <ons-list-item>Ram Jhula, Lakshman Jhula, River View Temple, Hari Ki Pauri, Ganga ghat.</ons-list-item>
+        <ons-list-header>Helpline numbers</ons-list-header>
+        <a href="tel:9876644331"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
+        Anti-Ragging</ons-button></ons-list-item></a>
+        <a href="tel:01824444335"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
+        Office Pro Chancellor</ons-button></ons-list-item></a>
+        <a href="tel:01824444399"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
+        Office Vice Chancellor</ons-button></ons-list-item></a>
+        <a href="tel:01824444361"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
+        DRS Office</ons-button></ons-list-item></a>
+        <a href="tel:01824444095"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
+        Security Office</ons-button></ons-list-item></a>
+        <a href="tel:01824444545"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
+        Helpline</ons-button></ons-list-item></a>
         </ons-list>
       </div>
     </ons-card>
-  <ons-card style="background-color:darkviolet;">
-    <img src="manali.png" alt="IMG" style="width: 100%">
-    <div class="title">
-      <p style="color: white;">Manali</p>
-    </div>
-    <div class="content">
-      <ons-list>
-        <ons-list-header>Facilities</ons-list-header>
-        <ons-list-item> ₹3099 - 3D/3N, ₹4099 - 4D/4N</ons-list-item>
-        <ons-list-item><b>Place to visit:</b></ons-list-item>
-        <ons-list-item>Van Vihar, hadimba Temple, Mall Road,Solang Valley, Jogini Water Fall
-          , Vashist Temple, Rafting Point.</ons-list-item>
-      </ons-list>
-    </div>
-  </ons-card>
-  <ons-card style="background-color:green;">
-    <img src="shimla.png" alt="IMG" style="width: 100%">
-    <div class="title">
-      <p style="color: white;">Shimla</p>
-    </div>
-    <div class="content">
-      <ons-list>
-        <ons-list-header>Facilities</ons-list-header>
-        <ons-list-item> ₹2199 - 2D/1N, ₹3099 - 3D/2N</ons-list-item>
-        <ons-list-item><b>Place to visit:</b></ons-list-item>
-        <ons-list-item>Kufri, Green Valley, Adventure Point, Deshu Peak, Maheshwari Temple, Jakhu Temple
-          ,Mall road, Lakkar bazar.</ons-list-item>
-      </ons-list>
-    </div>
-  </ons-card>
-  <ons-card style="background-color: rgb(243, 35, 46)">
-      <img src="dal.png" alt="IMG" style="width: 100%">
-      <div class="title">
-        <p style="color: white;">Dalhousie</p>
-      </div>
-      <div class="content">
-        <ons-list>
-          <ons-list-header>Facilities</ons-list-header>
-          <ons-list-item> ₹2099 - 2D/1N, ₹2999 - 3D/2N</ons-list-item>
-          <ons-list-item><b>Place to visit:</b></ons-list-item>
-          <ons-list-item>Local Visit, Old, Church & temple, Khajiar</ons-list-item>
-        </ons-list>
-      </div>
-    </ons-card>
-    <ons-card style="background-color: rgb(39, 108, 236)">
-        <img src="dhram.png" alt="IMG" style="width: 100%">
-        <div class="title">
-          <p style="color: white;">Dhramshala</p>
-        </div>
-        <div class="content">
-          <ons-list>
-            <ons-list-header>Facilities</ons-list-header>
-            <ons-list-item> ₹2099 - 2D/1N, ₹2999 - 3D/2N</ons-list-item>
-            <ons-list-item><b>Place to visit:</b></ons-list-item>
-            <ons-list-item>Dalailama Temple, Bhagsunag Temple, Naddi Lake, Stadium, Bhagsunag Water Fall,
-              , Monastry, Israel Street.
-            </ons-list-item>
-          </ons-list>
-        </div>
-      </ons-card>
-      <ons-card style="background-color: rgb(223, 29, 103)">
-          <img src="goa.png" alt="IMG" style="width: 100%">
-          <div class="title">
-            <p style="color: white;">Explore More... Goa Srinagar Ladakh</p>
-          </div>
-          <div class="content">
-            <ons-list>
-              <ons-list-header>Contact Details:</ons-list-header>
-              <ons-list-item>Block 13, room No. 206,Cabin No. 05 </ons-list-item>
-              <ons-list-item><b>Website : <a href="http://kinghillstravels.com/">kinghillstravels.com</a></b></ons-list-item>
-              <a href="tel:7355529479"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
-              <img src="326545-128.png" style="height: 7%; padding-top:2%; padding-bottom:2%;"></ons-button></ons-list-item></a>
-            </ons-list>
-          </div>
-        </ons-card>
-
 </ons-page>
 
   </div>
