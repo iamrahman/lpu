@@ -72,20 +72,17 @@ window.fn.load = function(page) {
                    // document.getElementById('try').innerHTML="Helloe"+data[1];
                     for(var i=0;i<3;i++)
                         {
-                            if(data[i]%3 !=0)
-                                {
-                                    data[i]=Math.ceil(data[i]/3);
-                                }
-                            else
-                            {
-                                    data[i]=data[i]/3;
-                            }
+                            data[i]=(data[i]/2.4);
                         }
                     var sum=eval(data[0]+data[1]+data[2]);
                    // document.getElementById('try').innerHTML=" "+data[0]+" "+data[1]+" "+data[2];
-                    mte=((mte/40)*20);
+                    mte=Math.ceil((mte/40)*20);
                     var sum=eval(sum+value+mte);
                     var final = 40-sum;
+                    if(final<0)
+                        {
+                            final=0;
+                        }
                     final=((final/50)*100).toFixed(1);
                     document.getElementById('mesg').innerHTML="Your Score is "+ sum.toFixed(0)+" out of 50<br>"+"You need to score atleat "+final+"% marks";
                 }
@@ -210,7 +207,7 @@ window.fn.load = function(page) {
     <p style="margin-top: 20px;">
       <ons-button onclick="show()">Show </ons-button>
     </p>
-      <p id="mesg" style="color: orangered; margin-top: 15%;">We will calculate marks till MTE <br> You need minimum 30% marks to pass in ETE</p>
+      <p id="mesg" style="color: orangered; margin-top: 15%;">We will calculate your marks till MTE <br> You need minimum 30% marks to pass in ETE</p>
   </div>
       </ons-page>
      
