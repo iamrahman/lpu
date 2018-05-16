@@ -32,6 +32,13 @@ window.fn.load = function(page) {
             var fcgpa = result/(noso);
             document.getElementById('mesg').innerHTML="Your final CGPA will be "+ fcgpa.toFixed(2);
         }
+        $(function() {
+        $(".phonecell").click(function(){
+            var PhoneNumber = $(this).text();
+            PhoneNumber=PhoneNumber.replace("Phone:","");
+            window.location.href="tel://"+PhoneNumber;
+        });
+    });
     </script>
     <style>
      #main-menu
@@ -149,7 +156,7 @@ window.fn.load = function(page) {
     <div class="content">
         <p3>1. Emergency</p3>
         <div>
-        <a href="tel:+91-9878426880"><ons-button style="width: 100%; background-color: forestgreen; padding-top: 2%; padding-bottom: 2%;"><center><img src="326545-128.png" style="height: 7%;"></center></ons-button></a>
+        <a href="tel://+91-9878426880"><ons-button style="width: 100%; background-color: forestgreen; padding-top: 2%; padding-bottom: 2%;"><center><img src="326545-128.png" style="height: 7%;"></center></ons-button></a>
       </div><br>
         <div>
             <p3>2. Hospital Male WARD</p3>
