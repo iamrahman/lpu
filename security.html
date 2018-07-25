@@ -20,6 +20,11 @@ window.fn.load = function(page) {
   load(page)
     .then(menu.close.bind(menu));
 };
+    $(document).ready(function(){
+    $("#btn1").click(function(){
+        $("p1").toggle();
+    });
+});
     </script>
     <script type="text/javascript">
     function show()
@@ -32,11 +37,6 @@ window.fn.load = function(page) {
             var fcgpa = result/(noso);
             document.getElementById('mesg').innerHTML="Your final CGPA will be "+ fcgpa.toFixed(2);
         }
-    $(document).ready(function(){
-    $("#btn1").click(function(){
-        $("p1").toggle();
-    });
-});
     </script>
     <style>
      #main-menu
