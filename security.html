@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
 <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
 <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
     
     window.fn = {};
@@ -31,6 +32,11 @@ window.fn.load = function(page) {
             var fcgpa = result/(noso);
             document.getElementById('mesg').innerHTML="Your final CGPA will be "+ fcgpa.toFixed(2);
         }
+    $(document).ready(function(){
+    $("btn").click(function(){
+        $("p1").toggle();
+    });
+});
     </script>
     <style>
      #main-menu
@@ -145,8 +151,9 @@ window.fn.load = function(page) {
       <div class="content"  style="height:auto;">
         <ons-list>
         <ons-list-header>Helpline numbers</ons-list-header>
-        <a href="tel:9876644331"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
-        Anti-Ragging</ons-button></ons-list-item></a>
+            <p1>9876644331</p1>
+            <ons-list-item><ons-button id="btn1" modifier="large" style="background-color:darkgreen">
+        Anti-Ragging</ons-button></ons-list-item>
         <a href="tel:01824444335"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
         Office Pro Chancellor</ons-button></ons-list-item></a>
         <a href="tel:01824444399"><ons-list-item><ons-button modifier="large" style="background-color:darkgreen">
