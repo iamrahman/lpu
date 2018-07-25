@@ -2,7 +2,6 @@
 <head>
 <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
 <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>   
     <script type="text/javascript">
     
@@ -20,11 +19,7 @@ window.fn.load = function(page) {
   load(page)
     .then(menu.close.bind(menu));
 };
-    $(document).ready(function(){
-    $("#btn1").click(function(){
-        $("p1").toggle();
-    });
-});
+    
     </script>
     <script type="text/javascript">
     function show()
@@ -151,7 +146,7 @@ window.fn.load = function(page) {
       <div class="content"  style="height:auto;">
         <ons-list>
         <ons-list-header>Helpline numbers</ons-list-header>
-            <ons-list-item>Anti-Ragging : <p style="margin-right:1%;">9876644331</p></ons-list-item>
+            <ons-list-item>Anti-Ragging : <p style="position: absolute; right: 0; text-align:right;">9876644331</p></ons-list-item>
             <ons-list-item>Office Pro Chancellor : <p style="margin-right:1%;">01824444335</p></ons-list-item>
             <ons-list-item>Office Vice Chancellor : <p style="margin-right:1%;">01824444399</p></ons-list-item>
             <ons-list-item>DRS Office : <p style="margin-right:1%;">01824444361</p></ons-list-item>
